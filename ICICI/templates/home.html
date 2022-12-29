@@ -1,0 +1,23 @@
+{%  extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    h1{
+    color:red;
+    }
+    h2{
+    color:green;
+    }
+    .a{
+    size:1000px;
+    }
+</style>
+
+<form action="" method="post">
+    {% csrf_token %}
+   {{form.as_p}}
+    <input type="submit">
+
+</form>
+
+{% endblock %}

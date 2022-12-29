@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" >
+    {% for i in model %}
+    <div>
+        {{i.name}}
+        <div>
+        <img src="{{i.image.url}}" width="200px" >
+            </div>
+      <p> <strike>Rs. {{i.marked_price}} </strike>| Rs. {{i.selling_price}}  </p>
+
+        <form method="post" action="addcart/">
+            {% csrf_token %}
+            <input name="prod_id" value="{{i.id}}">
+            <input type="submit" value="addtocart">
+        </form>
+
+
+
+    </div> <br>
+
+{% endfor %}
+</div>
+</body>
+</html>

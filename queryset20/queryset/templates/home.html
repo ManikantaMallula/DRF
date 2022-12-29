@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width:50%">
+    <tr>
+
+        <th> Name </th>
+        <th>Id</th>
+       <th> Join date</th>
+       <th> Salary</th>
+       <th> Location</th>
+       <th> Commission</th></tr>
+
+    <tbody>
+    {% for i in a %}
+    <tr>
+
+      <th> {{i.name}}</th>
+      <th> {{i.id}}</th>
+      <th> {{i.joindate}}</th>
+      <th> {{i.empsal}}</th>
+        <th> {{i.loc}}</th>
+        <th> {{i.commi}}</th>
+
+    </tr>
+    </td>
+    </tbody>
+
+
+
+{% endfor %}
+</table>
+</body>
+
+</html>

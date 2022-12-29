@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+
+    .div{
+    background-color: #EBEBEB;
+    width:30%;
+height:10%;
+    }
+hr{
+position: relative;
+        top: 20px;
+        border: none;
+        height: 3px;
+        background: black;
+        margin-bottom: 50px;
+        }
+</style>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+
+</form>
+
+
+{% for item in model %}
+
+{% if item.date_d.id == id %}
+<div class="div">
+<h2>{{item.add_item}}</h2>
+{{item.add_item.id}}
+Protein - {{item.add_item.Protein}}
+.
+Carbohydrates - {{item.add_item.Carbohydrates}}
+.
+Fat - {{item.add_item.Fat}}
+.
+Calories - {{item.add_item.Calories}}
+    <a href="deletea/{{item.add_item.id}}" type="submit" >Delete</a>
+ </div>
+{% endif %}
+
+{% endfor %}
+
+</body>
+</html>
+{% endblock %}

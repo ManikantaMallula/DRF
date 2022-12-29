@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body style="background-color: cyan;">
+        <div style="padding:10px;text-align: center;font-weight:bold; font-family:Serif">
+            <h1>  Dashboard </h1><br> 
+            <form action="" method="POST" >
+                {% csrf_token %}
+                {% for fm in form %}<br>
+                    {{fm.label}}<br>
+                        {{fm}}  <br> 
+                {% endfor %}<br>
+                <input type="submit"><br>
+                <a href="{% url 'logout' %}">Logout</a>
+            </form>
+        </div>
+    </body>
+</html>
+
+{% endblock %}

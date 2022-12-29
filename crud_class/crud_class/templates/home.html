@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+              padding:10px;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+              
+            }
+            
+            tr:nth-child(even) {
+              background-color: white;
+            }
+            th{
+                background-color: black;
+                color: white;
+            }
+            </style>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <h1 style='font-family:serif;color: blueviolet;'>IP: {{ip}}</h1>
+            <h1 style='font-family:serif ; color: hotpink'>Number of loggings: {{ct}}</h1>
+            {% for fm in blog %}
+                <table>
+                    <tr>
+                    <th style="text-align:center;">Title</th>
+                    <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td style="color:black; text-align: center;font-weight: bold;">{{fm.Title}} </td>
+                        <td style="color:black;">{{fm.Description}}
+                            <div class="text-right">  
+                        <a href="/edit/{{fm.id}}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/delete/{{fm.id}}" class="btn btn-danger btn-sm" >Delete</a>
+                    </div>
+                    </tr>
+                </table>
+                
+            {% endfor %}
+        </form>
+    </body>
+</html>
+
+{% endblock %}

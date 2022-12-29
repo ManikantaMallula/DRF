@@ -1,0 +1,25 @@
+Django REST framework is a powerful and flexible toolkit for building Web APIs.
+
+Python has a built in package called json, which is used to work with json data. ​
+dumps(data) – This is used to convert python object into json string.
+loads(data) – This is used to parse json string.
+
+JSONRenderer - This is used to render Serialized data into JSON which is understandable by Front End.
+
+complex datatype - python datatype - json data
+            serialization       json renderer
+
+json datatype - python datatype - complex datatype 
+         parse data         deserialization
+
+Validators​
+Field Level Validation​
+Object Level Validation
+
+The ModelSerializer class provides a shortcut that lets you automatically create a Serializer class 
+with fields that correspond to the Model fields.
+
+
+
+
+In our application customers to carry out basic Tracking,Complain Management & Serviceability features,additinally 

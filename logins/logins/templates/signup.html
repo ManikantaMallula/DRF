@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>signup page</title>
+</head>
+<body>
+<form action="" method="post" novalidate>
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+
+    {% for error in form.non_field_errors %}
+
+    <p> {{error}}</p>
+
+    {% endfor %}
+
+    {% endif %}
+
+
+    {% for fm in form %}
+
+    {{fm.label_tag}}
+    {{fm}}
+    {{fm.errors|striptags}} <br> <br>
+
+    {% endfor %}
+
+<input type="submit" value="submit">
+
+</form>
+
+{% if messages %}}
+{% for message in messages %}
+
+<small> {message.tags} {{message}}</small>
+
+{% endfor %}
+{% endif %}
+
+
+<a href="{% url 'login' %}">Login</a>
+
+
+</body>
+</html>

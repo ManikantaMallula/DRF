@@ -1,0 +1,32 @@
+
+<form  action="" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+
+<input type="submit" >
+</form>
+<table>
+  <thead>
+    <tr >
+      <th >Id</th>
+      <th >name</th>
+
+  </thead>
+ <tbody>
+ {% for i in ob1 %}
+    <tr>
+      <th >{{i.id}}</th>
+      <td>{{i.name}}</td>
+
+
+     <td>
+
+     </td>
+    </tr>
+ {% endfor %}
+ </tbody>
+</table>
+
+
+
+

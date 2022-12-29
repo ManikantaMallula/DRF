@@ -1,0 +1,74 @@
+Name of The Project - QUICKPORT365 (Cargo application)
+
+Description:
+
+	It is a web-based application and the main goal of this project is to establish a portal where user can schedule door step pickup and drop off,
+additionally they can tract basic shipment details, order history,raise complaint.
+drivers may use their dashboard to check the assigned orders and also they can update shipment status.  
+Mean while admin also track bookings,user issues and their status in secure way.
+
+Customer Relationship Management is a web-based application and the main objective of the application is to store all the records like customers profiles, 
+their purchases and payments. 
+Based on their purchases our application gives some grades, based on those grades customers get reward points. 
+Additionally, customers can raise complaints and concerns through application. 
+
+Roles & responsibilities:
+
+Responsible for creating models and queries to access the data from the database using django ORM 
+Performing the crud operations to models and making effective functionality to model records 
+Sending the mail and messages based on status of the parcel to the users and drivers by using django built-in email module and third party services 
+Making operations for the driver dashboard and wrote logic for contact of the user to the application 
+
+
+Name of The Project - PVH Digital Sign Up and Support
+
+Description: 
+
+PVH Digital Sign Up is a Web Application Project and is related to Customer Relationship Management.
+The objective of this project involves APIs and ETL process to sync the Customer Profile Data and also transactions 
+related data of all online and offline stores of the client there by creating a centralized unified system for 
+Calvin Klein and Tommy Hilfer Brands. It uses various Azure cloud services to accomplish this task like the Azure App Services, Azure Functions. 
+
+
+Customer Relationship Management is a web based application and the main objective of the application is to store all the records like customers profiles,their purchases and 
+payments,based on their purchases our application give some grades, based on those grades customes get reward points.additionally customers can raise comlaints and concerns through application. 
+
+
+Roles & Responsibilities: 
+
+Understanding and analysing the Project requirements. 
+Developed  2 APIs as per requirements. 
+Used Postman Tool for API Testing. 
+Involved in writing stored procedures. 
+
+
+
+
+1NF no multiple values in each and every column
+2NF it has to be in 1nf, should not contain partial depen
+3nf 2nf, transitive dependency
+boyce 
+
+
+
+Name of The Project - Software Cloud
+
+It is web based application the main object of the application is to provide multiple services to 
+software cloud users,which means whatever the services required in their projects can easily get from this application.
+
+Roles & Responsibilities: 
+
+Implemented Custom admin panel as per the requirement. 
+worked on the Authorization
+worked on the shade services 
+validations to filter unnecessary quota 
+
+
+worked on persistent cloud  a@1234546
+
+raise the requst
+\Worked on the cloud base
+
+
+
+ 

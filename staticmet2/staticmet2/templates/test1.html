@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first app </title>
+    {% load static %}
+    <link href="{% static 'css/col1.css' %}" rel="stylesheet">
+</head>
+<body>
+<img src="{% static 'img/a.jpg' %}" alt="image not loaded">
+<h1> Registration form</h1>
+
+<div>
+<lable>First Name</lable>
+<input type="text" placeholder="enter your first name ">
+</div>
+
+<div>
+    <lable>middele name</lable>
+<input type="text" placeholder="enter your middle name">
+</div>
+
+<div>
+    <label>Lase Name</label>
+    <input type="text" placeholder="enter your last name">
+</div>
+
+<div>
+    <label>Email id</label>
+    <input type="text" placeholder="enter your Email id">
+</div>
+
+<div>
+    <label>Password</label>
+    <input type="text" placeholder="enter your Password">
+</div>
+
+
+
+<div>
+    <label>Male</label>
+    <input type="radio" name="a">
+
+    <label>Female</label>
+    <input type="radio" name="a">
+
+    <label>Other</label>
+    <input type="radio" name="a">
+</div>
+
+
+</body>
+</html>

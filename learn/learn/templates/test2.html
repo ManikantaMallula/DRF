@@ -1,0 +1,191 @@
+{% extends "nav.html" %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <h6><a href="#com">jump to dql comments</a></h6>
+<h6><a href="#ww">Jump to where clause</a></h6>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<h1>What is SQL?
+
+</h1>
+
+    <p>SQL stands for Structured Query Language
+SQL lets you access and manipulate databases
+SQL became a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987 </p>
+<h1>What Can SQL do?
+
+</h1>
+
+    <p>
+        SQL can execute queries against a database
+SQL can retrieve data from a database
+SQL can insert records in a database
+SQL can update records in a database
+SQL can delete records from a database
+SQL can create new databases
+SQL can create new tables in a database
+SQL can create stored procedures in a database
+SQL can create views in a database
+SQL can set permissions on tables, procedures, and views
+    </p>
+
+</div>
+
+<div>
+<h1>Some of The Most Important SQL Commands
+
+</h1>
+
+    <p>SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+
+    </p>
+
+
+</div>
+
+
+<div>
+<h1>SQL SELECT Statement
+
+</h1>
+
+    <p>The SQL SELECT Statement
+The SELECT statement is used to select data from a database.
+
+The data returned is stored in a result table, called the result-set.
+
+    </p>
+    <p>
+        The SQL SELECT DISTINCT Statement
+The SELECT DISTINCT statement is used to return only distinct (different) values.
+
+Inside a table, a column often contains many duplicate values; and sometimes you only want to list the different (distinct) values.
+
+SELECT DISTINCT Syntax
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+    </p>
+
+
+</div>
+
+
+
+<div>
+<h1 id="ww">SQL WHERE Clause
+
+</h1>
+    <p>The WHERE clause is used to filter records.
+
+It is used to extract only those records that fulfill a specified condition.</p>
+
+    <p>Text Fields vs. Numeric Fields
+SQL requires single quotes around text values (most database systems will also allow double quotes).
+
+However, numeric fields should not be enclosed in quotes:
+
+    </p>
+
+
+</div>
+
+
+<div>
+<h1>SQL JOIN
+
+</h1>
+
+    <p>A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+Let's look at a selection from the "Orders" table:
+
+    </p>
+    <p>Notice that the "CustomerID" column in the "Orders" table refers to the "CustomerID" in the "Customers" table. The relationship between the two tables above is the "CustomerID" column.
+
+Then, we can create the following SQL statement (that contains an INNER JOIN), that selects records that have matching values in both tables:</p>
+<P>
+    Different Types of SQL JOINs
+Here are the different types of the JOINs in SQL:
+
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+</P>
+
+</div>
+
+
+<div>
+<h1>SQL GROUP BY Statement
+
+</h1>
+
+    <p>
+The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
+
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+    </p>
+    <p>
+        Example
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+    </p>
+
+
+</div>
+
+
+<div id="com">
+<h1>SQL Comments
+
+</h1>
+
+    <p>Comments are used to explain sections of SQL statements, or to prevent execution of SQL statements.
+
+    </p>
+    <p>Note: The examples in this chapter will not work in Firefox and Microsoft Edge!
+
+Comments are not supported in Microsoft Access databases. Firefox and Microsoft Edge are using Microsoft Access database in our examples.</p>
+<p>Single Line Comments
+Single line comments start with --.
+
+Any text between -- and the end of the line will be ignored (will not be executed).
+
+The following example uses a single-line comment as an explanation:</p>
+    <p>Multi-line Comments
+Multi-line comments start with /* and end with */.
+
+Any text between /* and */ will be ignored.
+
+The following example uses a multi-line comment as an explanation:</p>
+
+</div>
+
+</body>
+</html>
+
+{% endblock %}

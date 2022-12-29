@@ -1,0 +1,28 @@
+.skill{
+padding-left:500px;
+}
+
+.home{
+padding-left:500px;
+
+}
+
+.cont{
+
+padding-left:500px;
+
+}
+
+#content {
+    display: table;
+}
+
+#pageFooter {
+    display: table-footer-group;
+}
+
+#pageFooter:after {
+    counter-increment: page;
+    content: counter(page);
+}
+

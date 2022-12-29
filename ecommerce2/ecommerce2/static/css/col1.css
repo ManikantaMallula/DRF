@@ -1,0 +1,15 @@
+body{
+float:scroll;
+}
+h1{
+color:red;
+
+}
+.navbar-inverse{
+background-color:lightblue !important;
+}
+
+div{
+text-align:center;
+
+}

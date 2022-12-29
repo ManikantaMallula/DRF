@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Conform your detail </h1>
+{% for i,j in cust.items %}
+{% if i != 'csrfmiddlewaretoken' %}
+
+<h3>{{i}} - {{j}}</h3> <hr>
+
+{% endif %}
+{% endfor %}
+
+{% for i in l %}
+{% for j in l2 %}
+{% for b in  bus %}
+{% if cust %}
+{% if int(b.id) == int(cust[bus_name]%}
+{{j}} - {{i}}  <br>
+
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+
+<br>
+
+
+<input type="submit" value="Praceed To Pay ">
+</body>
+</html>
